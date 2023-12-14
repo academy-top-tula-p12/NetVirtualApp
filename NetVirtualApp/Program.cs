@@ -20,6 +20,11 @@ Console.WriteLine(shape);
 Console.WriteLine($"Area: {shape.Area()}, Perimetr: {shape.Perimetr()}");
 Console.WriteLine();
 
+Rectangle r1 = new(1, 1, 10, 20);
+Rectangle r2 = new(5, 2, 10, 30);
+Circle c1 = new(1, 1, 10);
+Console.WriteLine(r1.Equals(c1));
+
 
 void VirtualExample()
 {

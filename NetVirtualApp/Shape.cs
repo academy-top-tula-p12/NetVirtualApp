@@ -26,8 +26,6 @@ namespace NetVirtualApp
             return $"X: {X}, Y: {Y}";
         }
 
-
-
         abstract public int Area();
         abstract public int Perimetr();
     }
@@ -62,7 +60,13 @@ namespace NetVirtualApp
             return base.ToString() + $", Width: {Width}, Height: {Height}";
         }
 
-
+        public override bool Equals(object? obj)
+        {
+            if(obj is Rectangle rect)
+                return Width == rect.Width 
+                    && Height == rect.Height;
+            return false;
+        }
 
         public override int Area()
         {
